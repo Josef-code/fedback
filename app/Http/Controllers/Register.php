@@ -9,7 +9,11 @@ class register extends Controller
     public function index(Request $request)
     {   
         if ($request->isMethod('post')) {
-            dd($request->all());
+            $register_user = $request->validate([
+                'username' => 'required|max:225',
+                'email' => 'required',
+                'password' => 'required',
+            ]);
         }
 
         return view('pages.register');
