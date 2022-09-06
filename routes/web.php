@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\home;
+use App\Http\Controllers\register;
 use Illuminate\Support\Facades\Route;
+
 
 
 /*
@@ -15,10 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [Home::class, 'home'])->name('home');
 
-Route::get('/test', function()
-{
-    return '<h1>Guess this is working</h1>';
-});
-
-Route::get('/', [Home::class, 'home']);
+Route::match(['get', 'post'], '/register', [Register::class, 'index'])->name('register');
+Route::get('login', [Login::class, 'index'])->name('login');

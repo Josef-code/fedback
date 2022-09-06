@@ -13,12 +13,13 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-lg bg-dark">
-        <a class="navbar-brand container text-white logotext" href="#">FedBak</a>
+        <a class="navbar-brand container text-white logotext" href="{{ route('home') }}">FedBak</a>
       </nav>
     
     @yield('content')
     </div>
-
+    
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
