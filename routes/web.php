@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\home;
 use App\Http\Controllers\register;
+use App\Http\Controllers\login;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,4 +21,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Home::class, 'home'])->name('home');
 
 Route::match(['get', 'post'], '/register', [Register::class, 'index'])->name('register');
-Route::get('login', [Login::class, 'index'])->name('login');
+Route::match(['get', 'post'], '/login', [Login::class, 'index'])->name('login');
