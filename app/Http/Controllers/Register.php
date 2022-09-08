@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class register extends Controller
 {
@@ -14,6 +14,9 @@ class register extends Controller
                 'email' => 'required',
                 'password' => 'required',
             ]);
+
+            $user = User::create($register_user);
+            return redirect('/');
         }
 
         return view('pages.register');
@@ -21,7 +24,8 @@ class register extends Controller
 
     public function register(Request $request)
     {
-        dd( $request->all() );
+        //
+
     }
 
 }

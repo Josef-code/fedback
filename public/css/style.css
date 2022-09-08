@@ -23,3 +23,9 @@ body {
 /* .registeration-area{
     background-color: #413F42;
 } */
+
+.action-area {
+    padding: 5px;
+    background-color: darksalmon;
+    gap: 50px;
+}
