@@ -5,7 +5,12 @@
 
 <section class="registeration-area">
     <h3 class="text-center pt-4">Login</h3>
-    <form class="container w-50 py-4" action="{{ route('register') }}" method="POST">
+    <form class="container w-50 py-4" action="{{ route('login') }}" method="POST">
+    @if($message = Session::get('success'))
+    <div class="alert alert-success" role="alert">
+        {{ $message }}
+    </div>
+    @endif
     {{ csrf_field() }}
         <label for="Email"><strong>Email:</strong></label>
         @if ( $errors->has('email') )
