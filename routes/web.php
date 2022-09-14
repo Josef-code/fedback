@@ -24,3 +24,4 @@ Route::get('/', [Home::class, 'home'])->name('home');
 Route::match(['get', 'post'], '/register', [Register::class, 'index'])->name('register');
 Route::match(['get', 'post'], '/login', [Login::class, 'index'])->name('login');
 Route::get('dashboard', [Dashboard::class, 'index'])->name('dashboard');
+Route::get('logout', [Dashboard::class, 'logout'])->name('logout');

@@ -2,6 +2,10 @@ body {
     background-color:gainsboro;
 }
 
+a {
+    text-decoration: none;
+}
+
 .hero-section {
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
@@ -24,8 +28,7 @@ body {
     background-color: #413F42;
 } */
 
-.action-area {
-    padding: 5px;
-    background-color: darksalmon;
+.nav-action {
     gap: 50px;
+    background-color: red;
 }
